@@ -4,7 +4,7 @@ body{
 
 @font-face {
     font-family: "jersy25";
-    src: url("Jersey_25/Jersey25-Regular.ttf");
+    src: url("/static/Jersey25-Regular.ttf");
 }
 
 
