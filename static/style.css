@@ -1,0 +1,71 @@
+/* Center the box on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;   /* full screen height */
+  background: #f0f0f0; /* light background */
+  margin: 0;
+}
+
+/* Style the form container as a box */
+.form-container {
+  background-color: #C2BFBF;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 600px; /* fixed width for two columns */
+  display: grid;
+  grid-template-columns: 200px 1fr; /* label + input */
+  gap: 15px 20px; /* spacing between rows and columns */
+}
+
+/* Labels aligned left */
+.form-container label {
+  display: flex;
+  flex-direction: column; /* stack text above input */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Inputs styled neatly */
+.form-container input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Ratios at the bottom span full width */
+.form-container p {
+  grid-column: 1 / span 2; /* make them stretch across both columns */
+  margin: 5px 0;
+  font-weight: bold;
+}
+/* Hide button initially */
+/* Hide button initially */
+.submit-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: inline-block;
+  padding: 8px 16px;
+  background: purple;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transform: translateY(20px); /* start slightly below */
+}
+
+/* Show button when all inputs are valid */
+.form-container:has(input:invalid) .submit-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-container:has(input:valid) .submit-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0); /* slide into place */
+}
