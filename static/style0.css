@@ -1,0 +1,69 @@
+body{
+    background-color: #F5F0ED;
+}
+
+@font-face {
+    font-family: "jersy25";
+    src: url("Jersey_25/Jersey25-Regular.ttf");
+}
+
+
+p{
+    font-family: jersy25;
+    font-size: 180px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(9, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; } /* 9 characters in CRED_LENS */
+}
+
+
+
+.tit{
+    position:absolute;
+    top: 300px;
+    left: 20px;
+    font-family: jersy25;
+    font-size: 50px;
+}
+.but{
+    position: absolute;
+    top: 300px;
+    bottom: 100px;
+    left: 1100px;
+    font-size: 30px;
+    font-family: jersy25; 
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2s; /* delay matches typing duration */
+    display: inline-block;
+    text-decoration: underline;
+    color: purple;
+    font-weight: bold;
+}
+
+/* Fade + slide animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+div{
+    background-color: #C2BFBF;
+    
+}
